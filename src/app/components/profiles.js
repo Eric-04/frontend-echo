@@ -14,6 +14,10 @@ export default function profiles({Leaderboard}) {
 
     // adds it to leaderboard and sorts by score, then date
     Leaderboard = sort(Leaderboard.concat(profiles))
+    // if there are more than 10 scores, delete from the bottom
+    while (Leaderboard.length > 10) {
+        Leaderboard.pop()
+    }
 
     return (
         <div id = "profile">
