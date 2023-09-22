@@ -7,7 +7,7 @@ export default function form() {
     const [username, setUsername] = useState('')
     const [score, setScore] = useState(0)
     const [date, setDate] = useState(new Date())
-    const [pic, setPic] = useState("pic1")
+    const [pic, setPic] = useState("1")
 
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -48,14 +48,14 @@ export default function form() {
                     onChange = {(e) => setDate(e.target.value)}
                 >
                 </input>
-                <label>Choose Pic:</label>
+                <label>Choose a Profile Pic:</label>
                 <select
                     value={pic}
                     onChange={(e) => setPic(e.target.value)}
                 >
-                    <option value="pic1"> Pic 1 </option>
-                    <option value="pic2"> Pic 2 </option>
-                    <option value="pic3"> Pic 3 </option>
+                    <option value="1"> Pic 1 </option>
+                    <option value="2"> Pic 2 </option>
+                    <option value="3"> Pic 3 </option>
                 </select>
                 <button> SUBMIT </button>
     
